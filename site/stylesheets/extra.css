@@ -1,0 +1,39 @@
+:root  > * {
+    --md-primary-fg-color:        #0c3522;
+    --md-accent-fg-color:        #6CD053;
+    --md-typeset-a-color:     #570000;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"]{
+    --md-primary-fg-color: #0c3522;
+    --md-accent-fg-color: #6CD053;
+    --md-typeset-a-color: #6CD053;
+}
+
+.md-nav__link--active {
+    font-weight: 600;
+    background: #ffffff;
+    border-left: 3px solid #6CD053;
+    padding-left: 0.8rem;
+    border-radius: 0 4px 4px 0;
+}
+
+[data-md-color-scheme="slate"][data-md-color-primary="indigo"] .md-nav__link--active {
+    font-weight: 600;
+    background: #0c3522;
+    border-left: 3px solid #6CD053;
+    padding-left: 0.8rem;
+    border-radius: 0 4px 4px 0;
+}
+
+/* Hide drawer toggle from accessibility tree - it's decorative */
+.md-toggle[data-md-toggle="drawer"] {
+  position: absolute;
+  clip: rect(0, 0, 0, 0);
+  pointer-events: none;
+}
+
+/* Ensure the label is also hidden from screen readers */
+.md-header__button.md-logo {
+  aria-hidden: true;
+}

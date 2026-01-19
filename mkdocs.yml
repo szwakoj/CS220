@@ -1,0 +1,48 @@
+site_name: CS 220 - Computer Organization
+
+theme:
+  name: material
+  logo: img/cs220.png
+  favicon: img/cs220.png
+  #custom_dir: overrides
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/eye
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/eye-outline
+        name: Switch to light mode
+  features:
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - navigation.path
+    - navigation.prune
+    - navigation.sections
+    - navigation.expand
+  
+markdown_extensions:
+  - tables
+
+extra_javascript:
+  - javascript/wcag_fixes.js
+
+extra_css:
+  - stylesheets/extra.css
+
+nav:
+  - Home: index.md
+  - Syllabus: syllabus.md
+  - Schedule: schedule.md
+  - Glossary: glossary.md
+  - Lessons:
+    - Introduction: lessons/1_introduction.md
+    - Reviewing C: lessons/2_reviewing_c.md
+  - Labs:
+    - C Compilation: labs/c_compilation.md
+  - Homework:
+    - How To Hand In: homework/how_to_hand_in.md
+    - Homework 1 (Due 2/6/26): homework/1_c_review.md
