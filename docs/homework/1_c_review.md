@@ -1,9 +1,2 @@
 # C Review
-
-## Foo
-
-### Bar
-
-## Hee
-
-## HOO
+To be released 1/26/26

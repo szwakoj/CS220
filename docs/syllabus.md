@@ -9,6 +9,7 @@
 
 On-Campus, 4 Credits
 
+Room: A135
 <br>
 
 **Meeting Times:** Mondays and Wednesdays, 12:00pm - 1:50pm

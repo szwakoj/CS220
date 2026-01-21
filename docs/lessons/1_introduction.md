@@ -1,6 +1,3 @@
 # Introduction 
 
-- History
-- Computer Hardware
-- Abstraction Hierarchy
-- Modern Desktop
+To be released (1/26)

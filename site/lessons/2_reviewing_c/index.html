@@ -1,265 +1,63 @@
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
 
 <!doctype html>
 <html lang="en" class="no-js">
   <head>
-
-    <!-- Meta tags -->
     
-      <meta charset="utf-8" />
-      <meta name="viewport" content="width=device-width,initial-scale=1" />
-
-      <!-- Page description -->
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
       
-
-      <!-- Page author -->
       
-
-      <!-- Canonical -->
       
-
-      <!-- Previous page -->
       
-        <link rel="prev" href="../1_introduction/" />
+        <link rel="prev" href="../1_introduction/">
       
-
-      <!-- Next page -->
       
-        <link rel="next" href="../../labs/c_compilation/" />
+        <link rel="next" href="../../labs/c_compilation/">
       
-
-      <!-- Alternate versions -->
       
         
       
-
-      <!-- RSS feed -->
       
-
-      <!-- Favicon -->
-      <link rel="icon" href="../../img/cs220.png" />
-
-      <!-- Generator banner -->
-      <meta
-        name="generator"
-        content="mkdocs-1.6.1, $md-name$-$md-version$"
-      />
+      <link rel="icon" href="../../img/cs220.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.7.1">
     
-
-    <!-- Site title -->
     
       
         <title>Reviewing C - CS 220 - Computer Organization</title>
       
     
-
-    <!-- Theme-related style sheets -->
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.css" />
-
-      <!-- Extra color palette -->
+      <link rel="stylesheet" href="../../assets/stylesheets/main.484c7ddc.min.css">
       
         
-        <link
-          rel="stylesheet"
-          href="../../assets/stylesheets/palette.css"
-        />
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.ab4e12ef.min.css">
+      
       
 
-      <!-- Custom icons -->
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Custom admonition icons -->
-
-
-<!-- Custom annotation icon -->
-
-
-<!-- Custom tag icons -->
 
     
-
-    <!-- JavaScript libraries -->
     
       
     
-
-    <!-- Webfonts -->
     
-
-      <!-- Load fonts from Google -->
       
         
         
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-        <link
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback"
-        />
-        <style>
-          :root {
-            --md-text-font: "Roboto";
-            --md-code-font: "Roboto Mono";
-          }
-        </style>
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
       
     
-
-    <!-- Custom style sheets -->
     
-      <link rel="stylesheet" href="../../stylesheets/extra.css" />
+      <link rel="stylesheet" href="../../stylesheets/extra.css">
     
-
-    <!-- Helper functions for inline scripts -->
-    <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!--
-  A collection of functions used from within some partials to allow the usage
-  of state saved in local or session storage, e.g. to model preferences.
--->
-<script>
-
-  /* Compute base path once to integrate with instant loading */
-  __md_scope = new URL("../..", location)
-
-  /* Compute hash from the given string - see https://bit.ly/3pvPjXG */
-  __md_hash = v => [...v].reduce((h, c) => (h << 5) - h + c.charCodeAt(0), 0)
-
-  /* Fetch the value for a key from the given storage */
-  __md_get = (key, storage = localStorage, scope = __md_scope) => (
-    JSON.parse(storage.getItem(scope.pathname + "." + key))
-  )
-
-  /* Persist a key-value pair in the given storage */
-  __md_set = (key, value, storage = localStorage, scope = __md_scope) => {
-    try {
-      storage.setItem(scope.pathname + "." + key, JSON.stringify(value))
-    } catch (err) {
-      /* Uncritical, just swallow */
-    }
-  }
-</script>
-
-    <!-- Analytics -->
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine analytics provider -->
-
-
-<!-- Set up analytics provider -->
+      
 
     
-
-    <!-- Custom front matter -->
     
   </head>
-
-  <!-- Set text direction and color palette, if defined -->
   
   
     
@@ -269,130 +67,40 @@
     
     
     
-    <body
-      dir="ltr"
-      data-md-color-scheme="default"
-      data-md-color-primary="indigo"
-      data-md-color-accent="indigo"
-    >
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo">
   
     
-
-    <!--
-      State toggles - we need to set autocomplete="off" in order to reset the
-      drawer on back button invocation in some browsers
-    -->
-    <input
-      class="md-toggle"
-      data-md-toggle="drawer"
-      type="checkbox"
-      id="__drawer"
-      autocomplete="off"
-    />
-    <input
-      class="md-toggle"
-      data-md-toggle="search"
-      type="checkbox"
-      id="__search"
-      autocomplete="off"
-    />
-
-    <!-- Overlay for expanded drawer -->
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
     <label class="md-overlay" for="__drawer"></label>
-
-    <!-- Skip to content -->
     <div data-md-component="skip">
       
+        
+        <a href="#c-review" class="md-skip">
+          Skip to content
+        </a>
+      
     </div>
-
-    <!-- Announcement bar -->
     <div data-md-component="announce">
       
     </div>
-
-    <!-- Version warning -->
     
-
-    <!-- Header -->
     
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine classes -->
-
+      
 
   
 
-
-<!-- Header -->
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
-  <nav
-    class="md-header__inner md-grid"
-    aria-label="Header"
-  >
-
-    <!-- Link to home -->
-    <a
-      href="../.."
-      title="CS 220 - Computer Organization"
-      class="md-header__button md-logo"
-      aria-label="CS 220 - Computer Organization"
-      data-md-component="logo"
-    >
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Logo -->
-
-  <img src="../../img/cs220.png" alt="logo" />
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="../.." title="CS 220 - Computer Organization" class="md-header__button md-logo" aria-label="CS 220 - Computer Organization" data-md-component="logo">
+      
+  <img src="../../img/cs220.png" alt="logo">
 
     </a>
-
-    <!-- Button to open drawer -->
     <label class="md-header__button md-icon" for="__drawer">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
     </label>
-
-    <!-- Header title -->
     <div class="md-header__title" data-md-component="header-title">
       <div class="md-header__ellipsis">
         <div class="md-header__topic">
@@ -409,58 +117,16 @@
         </div>
       </div>
     </div>
-
-    <!-- Color palette toggle -->
     
       
-        <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Color palette toggle -->
-<form class="md-header__option" data-md-component="palette">
+        <form class="md-header__option" data-md-component="palette">
   
     
     
     
-    <input
-      class="md-option"
-      data-md-color-media=""
-      data-md-color-scheme="default"
-      data-md-color-primary="indigo"
-      data-md-color-accent="indigo"
-      
-        aria-label="Switch to dark mode"
-      
-      type="radio"
-      name="__palette"
-      id="__palette_0"
-    />
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to dark mode"  type="radio" name="__palette" id="__palette_0">
     
-      <label
-        class="md-header__button md-icon"
-        title="Switch to dark mode"
-        for="__palette_1"
-        hidden
-      >
+      <label class="md-header__button md-icon" title="Switch to dark mode" for="__palette_1" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 0-3 3 3 3 0 0 0 3 3 3 3 0 0 0 3-3 3 3 0 0 0-3-3m0 8a5 5 0 0 1-5-5 5 5 0 0 1 5-5 5 5 0 0 1 5 5 5 5 0 0 1-5 5m0-12.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5"/></svg>
       </label>
     
@@ -468,26 +134,9 @@
     
     
     
-    <input
-      class="md-option"
-      data-md-color-media=""
-      data-md-color-scheme="slate"
-      data-md-color-primary="indigo"
-      data-md-color-accent="indigo"
-      
-        aria-label="Switch to light mode"
-      
-      type="radio"
-      name="__palette"
-      id="__palette_1"
-    />
+    <input class="md-option" data-md-color-media="" data-md-color-scheme="slate" data-md-color-primary="indigo" data-md-color-accent="indigo"  aria-label="Switch to light mode"  type="radio" name="__palette" id="__palette_1">
     
-      <label
-        class="md-header__button md-icon"
-        title="Switch to light mode"
-        for="__palette_0"
-        hidden
-      >
+      <label class="md-header__button md-icon" title="Switch to light mode" for="__palette_0" hidden>
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 9a3 3 0 0 1 3 3 3 3 0 0 1-3 3 3 3 0 0 1-3-3 3 3 0 0 1 3-3m0-4.5c5 0 9.27 3.11 11 7.5-1.73 4.39-6 7.5-11 7.5S2.73 16.39 1 12c1.73-4.39 6-7.5 11-7.5M3.18 12a9.821 9.821 0 0 0 17.64 0 9.821 9.821 0 0 0-17.64 0"/></svg>
       </label>
     
@@ -495,153 +144,39 @@
 </form>
       
     
-
-    <!-- User preference: color palette -->
     
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- User preference: color palette -->
-<script>
-  var palette = __md_get("__palette")
-  if (palette && palette.color) {
-
-    /* Retrieve color palette for system preference */
-    if (palette.color.media === "(prefers-color-scheme)") {
-      var media = matchMedia("(prefers-color-scheme: light)")
-      var input = document.querySelector(media.matches
-        ? "[data-md-color-media='(prefers-color-scheme: light)']"
-        : "[data-md-color-media='(prefers-color-scheme: dark)']"
-      )
-
-      /* Retrieve colors for system preference */
-      palette.color.media   = input.getAttribute("data-md-color-media"),
-      palette.color.scheme  = input.getAttribute("data-md-color-scheme"),
-      palette.color.primary = input.getAttribute("data-md-color-primary"),
-      palette.color.accent  = input.getAttribute("data-md-color-accent")
-    }
-
-    /* Set color palette */
-    for (var [key, value] of Object.entries(palette.color))
-      document.body.setAttribute("data-md-color-" + key, value)
-  }
-</script>
+      <script>var palette=__md_get("__palette");if(palette&&palette.color){if("(prefers-color-scheme)"===palette.color.media){var media=matchMedia("(prefers-color-scheme: light)"),input=document.querySelector(media.matches?"[data-md-color-media='(prefers-color-scheme: light)']":"[data-md-color-media='(prefers-color-scheme: dark)']");palette.color.media=input.getAttribute("data-md-color-media"),palette.color.scheme=input.getAttribute("data-md-color-scheme"),palette.color.primary=input.getAttribute("data-md-color-primary"),palette.color.accent=input.getAttribute("data-md-color-accent")}for(var[key,value]of Object.entries(palette.color))document.body.setAttribute("data-md-color-"+key,value)}</script>
     
-
-    <!-- Site language selector -->
     
-
-    <!-- Button to open search modal -->
     
       
-
-      <!-- Check if search is actually enabled - see https://t.ly/DT_0V -->
       
         <label class="md-header__button md-icon" for="__search">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         </label>
-
-        <!-- Search interface -->
-        <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Search interface -->
-<div class="md-search" data-md-component="search" role="dialog">
+        <div class="md-search" data-md-component="search" role="dialog">
   <label class="md-search__overlay" for="__search"></label>
   <div class="md-search__inner" role="search">
     <form class="md-search__form" name="search">
-
-      <!-- Search input -->
-      <input
-        type="text"
-        class="md-search__input"
-        name="query"
-        aria-label="Search"
-        placeholder="Search"
-        autocapitalize="off"
-        autocorrect="off"
-        autocomplete="off"
-        spellcheck="false"
-        data-md-component="search-query"
-        required
-      />
-
-      <!-- Button to open search -->
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
       <label class="md-search__icon md-icon" for="__search">
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
         
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
       </label>
-
-      <!-- Search options -->
-      <nav
-        class="md-search__options"
-        aria-label="Search"
-      >
-
-        <!-- Button to share search -->
+      <nav class="md-search__options" aria-label="Search">
         
-
-        <!-- Button to reset search -->
-        <button
-          type="reset"
-          class="md-search__icon md-icon"
-          title="Clear"
-          aria-label="Clear"
-          tabindex="-1"
-        >
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
           
           <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
         </button>
       </nav>
-
-      <!-- Search suggestions -->
       
     </form>
     <div class="md-search__output">
       <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
-
-        <!-- Search results -->
         <div class="md-search-result" data-md-component="search-result">
           <div class="md-search-result__meta">
             Initializing search
@@ -654,67 +189,27 @@
 </div>
       
     
-
-    <!-- Repository information -->
     
   </nav>
-
-  <!-- Navigation tabs (sticky) -->
   
     
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
-
-<!-- Navigation tabs -->
-<nav
-  class="md-tabs"
-  aria-label="Tabs"
-  data-md-component="tabs"
->
+      
+<nav class="md-tabs" aria-label="Tabs" data-md-component="tabs">
   <div class="md-grid">
     <ul class="md-tabs__list">
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-tabs__item">
       <a href="../.." class="md-tabs__link">
         
   
-
-  <!-- Navigation link icon -->
   
     
   
-
-  <!-- Navigation link title -->
   Home
 
       </a>
@@ -724,24 +219,16 @@
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-tabs__item">
       <a href="../../syllabus/" class="md-tabs__link">
         
   
-
-  <!-- Navigation link icon -->
   
     
   
-
-  <!-- Navigation link title -->
   Syllabus
 
       </a>
@@ -751,24 +238,16 @@
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-tabs__item">
       <a href="../../schedule/" class="md-tabs__link">
         
   
-
-  <!-- Navigation link icon -->
   
     
   
-
-  <!-- Navigation link title -->
   Schedule
 
       </a>
@@ -778,24 +257,16 @@
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-tabs__item">
       <a href="../../glossary/" class="md-tabs__link">
         
   
-
-  <!-- Navigation link icon -->
   
     
   
-
-  <!-- Navigation link title -->
   Glossary
 
       </a>
@@ -805,99 +276,63 @@
       
         
   
-
-  <!-- Determine classes -->
   
   
     
   
-
-  <!-- Navigation item with nested items -->
   
     
-
-    <!-- Recurse, if the first item has further nested items -->
     
       <li class="md-tabs__item md-tabs__item--active">
         <a href="../1_introduction/" class="md-tabs__link">
           
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   Lessons
 
         </a>
       </li>
     
-
-  <!-- Navigation item -->
   
 
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     
-
-    <!-- Recurse, if the first item has further nested items -->
     
       <li class="md-tabs__item">
         <a href="../../labs/c_compilation/" class="md-tabs__link">
           
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   Labs
 
         </a>
       </li>
     
-
-  <!-- Navigation item -->
   
 
       
         
   
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Navigation item with nested items -->
   
     
-
-    <!-- Recurse, if the first item has further nested items -->
     
       <li class="md-tabs__item">
         <a href="../../homework/how_to_hand_in/" class="md-tabs__link">
           
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   Homework
 
         </a>
       </li>
     
-
-  <!-- Navigation item -->
   
 
       
@@ -908,157 +343,57 @@
   
 </header>
     
-
-    <!-- Container -->
     <div class="md-container" data-md-component="container">
-
-      <!-- Hero teaser -->
       
-
-      <!-- Navigation tabs (collapsing) -->
       
         
       
-
-      <!-- Main area -->
       <main class="md-main" data-md-component="main">
         <div class="md-main__inner md-grid">
-
-          <!-- Sidebars -->
           
-
-            <!-- Navigation -->
             
               
-              <div
-                class="md-sidebar md-sidebar--primary"
-                data-md-component="sidebar"
-                data-md-type="navigation"
-                
-              >
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
-
-<!-- Determine classes -->
+                    
 
 
   
 
 
-
-<!-- Navigation -->
-<nav
-  class="md-nav md-nav--primary md-nav--lifted"
-  aria-label="Navigation"
-  data-md-level="0"
->
-
-  <!-- Site title -->
+<nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a
-      href="../.."
-      title="CS 220 - Computer Organization"
-      class="md-nav__button md-logo"
-      aria-label="CS 220 - Computer Organization"
-      data-md-component="logo"
-    >
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Logo -->
-
-  <img src="../../img/cs220.png" alt="logo" />
+    <a href="../.." title="CS 220 - Computer Organization" class="md-nav__button md-logo" aria-label="CS 220 - Computer Organization" data-md-component="logo">
+      
+  <img src="../../img/cs220.png" alt="logo">
 
     </a>
     CS 220 - Computer Organization
   </label>
-
-  <!-- Repository information -->
   
-
-  <!-- Navigation list -->
   <ul class="md-nav__list" data-md-scrollfix>
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../.." class="md-nav__link">
         
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Home
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
       </a>
@@ -1068,42 +403,24 @@
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../../syllabus/" class="md-nav__link">
         
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Syllabus
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
       </a>
@@ -1113,42 +430,24 @@
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../../schedule/" class="md-nav__link">
         
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Schedule
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
       </a>
@@ -1158,42 +457,24 @@
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../../glossary/" class="md-nav__link">
         
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Glossary
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
       </a>
@@ -1203,166 +484,83 @@
     
       
       
-
-  <!-- Determine classes -->
   
   
     
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
     
     
     
-
-    <!-- Navigation tabs -->
     
-
-      <!-- Render 1st level active item as section -->
       
         
         
       
-
-      <!-- Navigation tabs + sections -->
       
-
-        <!-- Render 2nd level items with nested items as sections -->
         
       
-
-    <!-- Navigation sections -->
     
-
-    <!-- Navigation pruning -->
     
-
-      <!-- Prune item if it is not a section and not active -->
       
     
-
-    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
-
-        <!-- Determine checked and indeterminate state -->
         
-
-        <!-- Active checkbox expands items contained within nested section -->
-        <input
-          class="md-nav__toggle md-toggle "
-          type="checkbox"
-          id="__nav_5"
-          checked
-        />
-
-        <!-- Toggle to expand nested items -->
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" checked>
         
           
-          <label
-            class="md-nav__link"
-            for="__nav_5"
-            id="__nav_5_label"
-            tabindex=""
-          >
+          <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="">
             
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Lessons
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
             <span class="md-nav__icon md-icon"></span>
           </label>
-
-        <!-- Toggle to expand nested items with link to index page -->
         
-
-        <!-- Nested navigation -->
-        <nav
-          class="md-nav"
-          data-md-level="1"
-          aria-labelledby="__nav_5_label"
-          aria-expanded="true"
-        >
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_5">
             <span class="md-nav__icon md-icon"></span>
             
-
-  <!-- Typeset title -->
   
     Lessons
   
 
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
-
-            <!-- Nested navigation item -->
             
               
                 
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item">
       <a href="../1_introduction/" class="md-nav__link">
         
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Introduction
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
   
-
-  <!-- Navigation link status -->
   
 
       </a>
@@ -1373,168 +571,245 @@
             
               
                 
-
-  <!-- Determine classes -->
   
   
     
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-nav__item md-nav__item--active">
       
-
-      <!-- State toggle -->
-      <input
-        class="md-nav__toggle md-toggle"
-        type="checkbox"
-        id="__toc"
-      />
-
-      <!-- Hack: see partials/toc.html for more information -->
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
       
       
-
-      <!-- Navigation link to table of contents -->
-      
-      <a
-        href="./"
-        class="md-nav__link md-nav__link--active"
-      >
         
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Reviewing C
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
+  
   
 
-  <!-- Navigation link status -->
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    
+  
+    Reviewing C
+  
+
+    
+  </span>
+  
   
 
       </a>
+      
+        
 
-      <!-- Table of contents -->
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilation and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables and Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composite Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditionals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-c-pre-processor-cpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The C Pre-Processor (CPP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
-
-  <!-- Navigation item -->
   
 
               
             
           </ul>
         </nav>
-
-      <!-- Pruned navigation item -->
       
     </li>
-
-  <!-- Currently active page -->
   
 
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
     
     
     
-
-    <!-- Navigation tabs -->
     
-
-      <!-- Render 1st level active item as section -->
       
-
-      <!-- Navigation tabs + sections -->
       
-
-        <!-- Render 2nd level items with nested items as sections -->
         
       
-
-    <!-- Navigation sections -->
     
-
-    <!-- Navigation pruning -->
     
-
-      <!-- Prune item if it is not a section and not active -->
       
         
         
       
     
-
-    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
   
-
-  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../labs/c_compilation/" class="md-nav__link">
       
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Labs
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
+  
   
 
-  <!-- Navigation link status -->
-  
-
-
-      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1543,93 +818,51 @@
 
       
     </li>
-
-  <!-- Currently active page -->
   
 
     
       
       
-
-  <!-- Determine classes -->
   
   
-
-  <!-- Determine active page for paginated views -->
   
-
-  <!-- Navigation item with nested items -->
   
-
-    <!-- Determine all nested items that are index pages -->
     
     
     
-
-    <!-- Navigation tabs -->
     
-
-      <!-- Render 1st level active item as section -->
       
-
-      <!-- Navigation tabs + sections -->
       
-
-        <!-- Render 2nd level items with nested items as sections -->
         
       
-
-    <!-- Navigation sections -->
     
-
-    <!-- Navigation pruning -->
     
-
-      <!-- Prune item if it is not a section and not active -->
       
         
         
       
     
-
-    <!-- Nested navigation item -->
     <li class="md-nav__item md-nav__item--pruned md-nav__item--nested">
       
         
   
   
-
-  <!-- Recurse, if the first item has further nested items -->
   
     <a href="../../homework/how_to_hand_in/" class="md-nav__link">
       
   
-
-  <!-- Navigation link icon -->
   
-
-  <!-- Navigation link title -->
   <span class="md-ellipsis">
     
-
-  <!-- Typeset title -->
   
     Homework
   
 
-
-    <!-- Navigation link subtitle -->
     
   </span>
-
-  <!-- Navigation link to encrypted content -->
+  
   
 
-  <!-- Navigation link status -->
-  
-
-
-      <!-- Only render toggle if there's at least one nested item -->
       
         <span class="md-nav__icon md-icon"></span>
       
@@ -1638,8 +871,6 @@
 
       
     </li>
-
-  <!-- Currently active page -->
   
 
     
@@ -1649,58 +880,144 @@
                 </div>
               </div>
             
-
-            <!-- Table of contents -->
             
               
-              <div
-                class="md-sidebar md-sidebar--secondary"
-                data-md-component="sidebar"
-                data-md-type="toc"
-                
-              >
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
                 <div class="md-sidebar__scrollwrap">
                   <div class="md-sidebar__inner">
-                    <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+                    
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine title -->
-
-
-
-<!-- Table of contents -->
 <nav class="md-nav md-nav--secondary" aria-label="Table of contents">
   
-
-  <!--
-    Check whether the content starts with a level 1 headline. If it does, the
-    top-level anchor must be skipped, since it would be redundant to the link
-    to the current page that is located just above the anchor. Therefore we
-    directly continue with the children of the anchor.
-  -->
   
   
-
-  <!-- Table of contents title and list -->
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#compilation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilation
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Compilation">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#compilation-and-interpretation" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Compilation and Interpretation
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basics" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basics
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Basics">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#variables-and-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Variables and Data Types
+      
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="Variables and Data Types">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#basic-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Basic Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#composite-data-types" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Composite Data Types
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#conditionals" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Conditionals
+      
+    </span>
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#loops" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        Loops
+      
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-c-pre-processor-cpp" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        The C Pre-Processor (CPP)
+      
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
   
 </nav>
                   </div>
@@ -1708,57 +1025,21 @@
               </div>
             
           
-
-          <!-- Page content container -->
           
             <div class="md-content" data-md-component="content">
-
-              <!-- Navigation path (breadcrumbs) -->
               
-                <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
+                
 
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-
-
-<!-- Determine whether to show navigation path -->
-
-
-<!-- Determine whether we have enough pages for rendering -->
 
 
   
 
-
-<!-- Navigation path (breadcrumbs) -->
 
   <nav class="md-path" aria-label="Navigation" >
     <ol class="md-path__list">
-
-      <!-- Render homepage first, if available -->
       
         
   
-
-  <!-- Navigation item with nested items -->
   
     <li class="md-path__item">
       <a href="../.." class="md-path__link">
@@ -1772,17 +1053,11 @@
   
 
       
-
-      <!-- Render ancestors in reverse -->
       
         
   
-
-  <!-- Navigation item with nested items -->
   
     
-
-    <!-- Recurse, if the first item has further nested items -->
     
       <li class="md-path__item">
         <a href="../1_introduction/" class="md-path__link">
@@ -1794,8 +1069,6 @@
         </a>
       </li>
     
-
-  <!-- Navigation item -->
   
 
       
@@ -1803,355 +1076,295 @@
   </nav>
 
               
-
-              <!-- Page content -->
               <article class="md-content__inner md-typeset">
                 
-                  <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Tags -->
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine whether to show tags -->
+                  
 
 
-<!-- Tags -->
+
+<h1 id="c-review">C Review</h1>
+<ul>
+<li>A general C review</li>
+<li>Compiled languages</li>
+<li>C datatypes, both primitive and composite</li>
+<li>Conditionals and loops</li>
+<li>The C Pre-Processor</li>
+<li>and introducing C++</li>
+</ul>
+<h2 id="compilation">Compilation</h2>
+<p>Before recalling the C syntax and semantics, we must first remember the domain we are working in and how programs are ran on a computer system. Computers cannot understand human languages without the power and water supply of a medium-sized town, meaning there must be intermediate steps to running our human-readable code on a computer.</p>
+<h3 id="compilation-and-interpretation">Compilation and Interpretation</h3>
+<p>The two main methods of getting a computer to run code are <strong>compilation</strong> and <strong>interpretation</strong>. </p>
+<p><strong>Interpreted languages</strong> like Python and JavaScript are executed line-by-line by an interpreter at runtime. When you run a Python script, the interpreter reads each line, translates it to machine instructions, and executes it immediately. This makes development faster since you can test code quickly, but execution tends to be slower since the machine instructions are not always written in the most efficient manner out-of-the-box.</p>
+<p><strong>Compiled languages</strong>, like C and C++, accomplish this task in a different way. Instead of being executed by and interpreter at runtime, C programs are compiled and converted to low-level machine code before runtime. Essentially, compiled languages are translated into machine code at compile time for the target system to produce an executable that can be ran without recompilation or interpretation. This leads to faster programs and more fine-grained control over what happens during the course of your program</p>
+<p>This process involves four primary steps:</p>
+<ol>
+<li><strong>Preprocessing</strong>: The C preprocessor (CPP) formats the source code using macros like <code>#include</code> or <code>#define</code>, applying any user-defined changes before passing to the next step</li>
+<li><strong>Compilation</strong>: The compiler translates C source code into assembly language</li>
+<li><strong>Assembly</strong>: The assembler then converts the assembly code into machine code, producing object files, <code>.o</code> or <code>.obj</code>, as a result</li>
+<li><strong>Linking</strong>: The linker orders the object files properly and combines them into a single executable program that is ready to run on the target system</li>
+</ol>
+<p>The following are the commands to compile a simple C program, using the GNU C Compiler:
+<div class="language-bash highlight"><pre><span></span><code><span id="__span-0-1"><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="c1"># Compile source.c into an executable named program</span>
+</span><span id="__span-0-2"><a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a>gcc<span class="w"> </span>source.c<span class="w"> </span>-o<span class="w"> </span>program
+</span><span id="__span-0-3"><a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="c1"># Run the executable</span>
+</span><span id="__span-0-4"><a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a>./program
+</span></code></pre></div>
+In this simple program, all of the main steps are hidden from the user, however we can use compiler flags to view some of the intermediate files:</p>
+<ul>
+<li><code>-E</code>: Stops after preprocessing stage</li>
+<li><code>-S</code>: Stops compilation after generating assembly code</li>
+<li><code>-c</code>: Stops compilation after generating object files, preventing linking</li>
+</ul>
+<h2 id="basics">Basics</h2>
+<p>Now that we have reviewed how to compile and run our programs, let's go over the the fundamental building blocks of C programming.</p>
+<p>The following is a standard "Hello World!" program written in C:
+<div class="language-c highlight"><pre><span></span><code><span id="__span-1-1"><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-1-2"><a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>
+</span><span id="__span-1-3"><a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span>
+</span><span id="__span-1-4"><a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="p">{</span>
+</span><span id="__span-1-5"><a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello CS240!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-1-6"><a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a>
+</span><span id="__span-1-7"><a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-1-8"><a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<ol>
+<li><code class="language-C highlight"><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span></code> - This is a preprocessor macro to include the <code>stdio.h</code> file at the beginning of this source code file.</li>
+<li><code class="language-C highlight"><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(){}</span></code> - The main function, our main entry point into executing code on the computer. The compiler runs this function in the final executable, making it responsible for orchestrating  all other functions.</li>
+<li><code class="language-C highlight"><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span></code> - Command line arguments. When you run the program in the command-line, you may optionally give additional parameters to feed into your program, for example: <code class="language-bash highlight">./program<span class="w"> </span>argument1<span class="w"> </span>argument2</code>. <code>argc</code> and <code>argv</code> are variables that contain information about the command-line arguments. <code>argc</code><ol>
+<li><code>argc</code> - the number of arguments, including the filename of the executable<ol>
+<li>In the example above, it would take on the value 3</li>
+</ol>
+</li>
+<li><code>argv</code> - an array of char*'s to the actual string parameters passed</li>
+</ol>
+</li>
+<li><code class="language-C highlight"><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Hello CS240!</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span></code> - This line represents a statement in C, an individual line of code. All statements in C must end in a semicolon <code>;</code>. This specific statement is calling a function from <code>stdio.h</code>, <code class="language-C highlight"><span class="n">printf</span><span class="p">();</span></code> which allows the programmer to print information to the screen.</li>
+<li><code class="language-C highlight"><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span></code> - The return statement. When we defined <code class="language-C highlight"><span class="n">main</span><span class="p">();</span></code>, we put an <code class="language-C highlight"><span class="kt">int</span></code> identifier before the function identifier. This defines the return type that is expected from our function, which is enforced by the compiler. When the return statement is ran the function ends and as will the entire program.  </li>
+</ol>
+<h3 id="variables-and-data-types">Variables and Data Types</h3>
+<p>Variables in C must be declared with a specific type before use. Unlike dynamically typed languages, C requires you to explicitly state what kind of data each variable will hold.</p>
+<p>The following is an example of declaring variables:
+<div class="language-C highlight"><pre><span></span><code><span id="__span-2-1"><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span>
+</span><span id="__span-2-2"><a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a>
+</span><span id="__span-2-3"><a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="kt">int</span><span class="w"> </span><span class="nf">main</span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">argc</span><span class="p">,</span><span class="w"> </span><span class="k">const</span><span class="w"> </span><span class="kt">char</span><span class="o">*</span><span class="w"> </span><span class="n">argv</span><span class="p">[])</span>
+</span><span id="__span-2-4"><a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="p">{</span>
+</span><span id="__span-2-5"><a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">num_books</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">1000</span><span class="p">;</span><span class="w">      </span><span class="c1">// Declaring an int type with a starting value</span>
+</span><span id="__span-2-6"><a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">    </span><span class="kt">float</span><span class="w"> </span><span class="n">average_length</span><span class="p">;</span><span class="w">      </span><span class="c1">// Declaring a float type without a starting value</span>
+</span><span id="__span-2-7"><a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a>
+</span><span id="__span-2-8"><a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a>
+</span><span id="__span-2-9"><a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="k">return</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-2-10"><a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<h4 id="basic-data-types">Basic Data Types</h4>
+<p>C provides several primitive data types:</p>
+<ul>
+<li><strong>Integer Types</strong>: <code>int</code>, <code>short</code>, <code>long</code>, <code>long long</code><ul>
+<li>Typically <code>int</code> is 4 bytes (32 bits), ranging from -2,147,483,648 to 2,147,483,647</li>
+<li>Can be modified with <code>unsigned</code> for non-negative values only</li>
+</ul>
+</li>
+<li><strong>Floating-Point Types</strong>: <code>float</code>, <code>double</code><ul>
+<li><code>float</code> is single-precision (4 bytes)</li>
+<li><code>double</code> is double-precision (8 bytes), preferred for most applications</li>
+</ul>
+</li>
+<li><strong>Character Type</strong>: <code>char</code><ul>
+<li>1 byte, used for characters and small integers</li>
+<li>Characters are enclosed in single quotes: <code>'A'</code>, <code>'z'</code>, <code>'\n'</code></li>
+</ul>
+</li>
+<li><strong>Boolean Type</strong>: <code>bool</code> with <code>&lt;stdbool.h&gt;</code><ul>
+<li>Values are <code>true</code> or <code>false</code>
+Example declarations:
+<div class="language-C highlight"><pre><span></span><code><span id="__span-3-1"><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-3-2"><a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="kt">double</span><span class="w"> </span><span class="n">pi</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.14159</span><span class="p">;</span>
+</span><span id="__span-3-3"><a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="kt">char</span><span class="w"> </span><span class="n">grade</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;A&#39;</span><span class="p">;</span>
+</span><span id="__span-3-4"><a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="kt">unsigned</span><span class="w"> </span><span class="kt">int</span><span class="w"> </span><span class="n">positive_only</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span></code></pre></div></li>
+</ul>
+</li>
+</ul>
+<h4 id="composite-data-types">Composite Data Types</h4>
+<p>Beyond basic types, C allows you to build more complex data structures:</p>
+<p><strong>Arrays</strong>: Contiguous blocks of memory holding multiple elements of the same type
+<div class="language-c highlight"><pre><span></span><code><span id="__span-4-1"><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="mi">20</span><span class="p">,</span><span class="w"> </span><span class="mi">30</span><span class="p">,</span><span class="w"> </span><span class="mi">40</span><span class="p">,</span><span class="w"> </span><span class="mi">50</span><span class="p">};</span>
+</span><span id="__span-4-2"><a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">20</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s">&quot;Alice&quot;</span><span class="p">;</span><span class="w">  </span><span class="c1">// Strings are char arrays</span>
+</span><span id="__span-4-3"><a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>
+</span><span id="__span-4-4"><a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="c1">// Access elements by index (zero-indexed)</span>
+</span><span id="__span-4-5"><a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="kt">int</span><span class="w"> </span><span class="n">first</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">numbers</span><span class="p">[</span><span class="mi">0</span><span class="p">];</span><span class="w">  </span><span class="c1">// 10</span>
+</span><span id="__span-4-6"><a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="n">numbers</span><span class="p">[</span><span class="mi">2</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">35</span><span class="p">;</span><span class="w">         </span><span class="c1">// Modify third element</span>
+</span></code></pre></div>
+Arrays in C have fixed size and no bounds checking. Accessing an index outside the array's bounds leads to undefined behavior, a common source of bugs.</p>
+<p><strong>Structures</strong>: Group related data of different types
+<div class="language-c highlight"><pre><span></span><code><span id="__span-5-1"><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-5-2"><a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">    </span><span class="kt">char</span><span class="w"> </span><span class="n">name</span><span class="p">[</span><span class="mi">50</span><span class="p">];</span>
+</span><span id="__span-5-3"><a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="kt">int</span><span class="w"> </span><span class="n">id</span><span class="p">;</span>
+</span><span id="__span-5-4"><a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="kt">double</span><span class="w"> </span><span class="n">gpa</span><span class="p">;</span>
+</span><span id="__span-5-5"><a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="p">};</span>
+</span><span id="__span-5-6"><a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a>
+</span><span id="__span-5-7"><a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="k">struct</span><span class="w"> </span><span class="nc">Student</span><span class="w"> </span><span class="n">alice</span><span class="p">;</span>
+</span><span id="__span-5-8"><a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="n">alice</span><span class="p">.</span><span class="n">id</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">12345</span><span class="p">;</span>
+</span><span id="__span-5-9"><a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="n">alice</span><span class="p">.</span><span class="n">gpa</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mf">3.8</span><span class="p">;</span>
+</span><span id="__span-5-10"><a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="n">strcpy</span><span class="p">(</span><span class="n">alice</span><span class="p">.</span><span class="n">name</span><span class="p">,</span><span class="w"> </span><span class="s">&quot;Alice Johnson&quot;</span><span class="p">);</span>
+</span></code></pre></div></p>
+<p><strong>Pointers</strong>: Variables that store memory addresses
+<div class="language-c highlight"><pre><span></span><code><span id="__span-6-1"><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">value</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">42</span><span class="p">;</span>
+</span><span id="__span-6-2"><a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="kt">int</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="o">&amp;</span><span class="n">value</span><span class="p">;</span><span class="w">  </span><span class="c1">// ptr stores the address of value</span>
+</span><span id="__span-6-3"><a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>
+</span><span id="__span-6-4"><a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Value: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">*</span><span class="n">ptr</span><span class="p">);</span><span class="w">  </span><span class="c1">// Dereference to get value (42)</span>
+</span><span id="__span-6-5"><a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="o">*</span><span class="n">ptr</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">100</span><span class="p">;</span><span class="w">  </span><span class="c1">// Modify value through pointer</span>
+</span><span id="__span-6-6"><a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="n">printf</span><span class="p">(</span><span class="s">&quot;New value: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">value</span><span class="p">);</span><span class="w">  </span><span class="c1">// Prints 100</span>
+</span></code></pre></div>
+Pointers are powerful but dangerous. They enable dynamic memory allocation and efficient data manipulation, but incorrect pointer usage causes crashes, memory leaks, and security vulnerabilities.</p>
+<h3 id="conditionals">Conditionals</h3>
+<p>Conditionals allow your program to make decisions based on conditions.</p>
+<p><strong>If-Else Statements</strong>
+<div class="language-c highlight"><pre><span></span><code><span id="__span-7-1"><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">score</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">85</span><span class="p">;</span>
+</span><span id="__span-7-2"><a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>
+</span><span id="__span-7-3"><a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">90</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-4"><a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Grade: A</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-7-5"><a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">80</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-6"><a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Grade: B</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-7-7"><a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="k">if</span><span class="w"> </span><span class="p">(</span><span class="n">score</span><span class="w"> </span><span class="o">&gt;=</span><span class="w"> </span><span class="mi">70</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-8"><a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Grade: C</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-7-9"><a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="p">}</span><span class="w"> </span><span class="k">else</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-7-10"><a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Grade: F</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-7-11"><a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><strong>Switch Statements</strong>: Useful for multiple discrete cases
+<div class="language-c highlight"><pre><span></span><code><span id="__span-8-1"><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="kt">char</span><span class="w"> </span><span class="n">operation</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">;</span>
+</span><span id="__span-8-2"><a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="kt">int</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span><span class="w"> </span><span class="n">b</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span>
+</span><span id="__span-8-3"><a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a>
+</span><span id="__span-8-4"><a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="k">switch</span><span class="w"> </span><span class="p">(</span><span class="n">operation</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-8-5"><a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;+&#39;</span><span class="p">:</span>
+</span><span id="__span-8-6"><a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Result: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">+</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-8-7"><a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-8-8"><a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;-&#39;</span><span class="p">:</span>
+</span><span id="__span-8-9"><a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Result: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">-</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-8-10"><a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-8-11"><a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">    </span><span class="k">case</span><span class="w"> </span><span class="sc">&#39;*&#39;</span><span class="p">:</span>
+</span><span id="__span-8-12"><a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Result: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">a</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">b</span><span class="p">);</span>
+</span><span id="__span-8-13"><a id="__codelineno-8-13" name="__codelineno-8-13" href="#__codelineno-8-13"></a><span class="w">        </span><span class="k">break</span><span class="p">;</span>
+</span><span id="__span-8-14"><a id="__codelineno-8-14" name="__codelineno-8-14" href="#__codelineno-8-14"></a><span class="w">    </span><span class="k">default</span><span class="o">:</span>
+</span><span id="__span-8-15"><a id="__codelineno-8-15" name="__codelineno-8-15" href="#__codelineno-8-15"></a><span class="w">        </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Unknown operation</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">);</span>
+</span><span id="__span-8-16"><a id="__codelineno-8-16" name="__codelineno-8-16" href="#__codelineno-8-16"></a><span class="p">}</span>
+</span></code></pre></div>
+The <code>break</code> statement is crucial in switch cases to prevent fall-through to subsequent cases.</p>
+<h3 id="loops">Loops</h3>
+<p>Loops enable repetition of code blocks.</p>
+<p><strong>For Loops</strong>: Best when the number of iterations is known
+<div class="language-c highlight"><pre><span></span><code><span id="__span-9-1"><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="c1">// Print numbers 0 through 9</span>
+</span><span id="__span-9-2"><a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">10</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-3"><a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">i</span><span class="p">);</span>
+</span><span id="__span-9-4"><a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="p">}</span>
+</span><span id="__span-9-5"><a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>
+</span><span id="__span-9-6"><a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="c1">// Iterate through an array</span>
+</span><span id="__span-9-7"><a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="kt">int</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="mi">5</span><span class="p">]</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="p">{</span><span class="mi">2</span><span class="p">,</span><span class="w"> </span><span class="mi">4</span><span class="p">,</span><span class="w"> </span><span class="mi">6</span><span class="p">,</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span><span class="w"> </span><span class="mi">10</span><span class="p">};</span>
+</span><span id="__span-9-8"><a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="k">for</span><span class="w"> </span><span class="p">(</span><span class="kt">int</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">;</span><span class="w"> </span><span class="n">i</span><span class="o">++</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-9-9"><a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;%d &quot;</span><span class="p">,</span><span class="w"> </span><span class="n">arr</span><span class="p">[</span><span class="n">i</span><span class="p">]);</span>
+</span><span id="__span-9-10"><a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><strong>While Loops</strong>: Best when the number of iterations is unknown
+<div class="language-c highlight"><pre><span></span><code><span id="__span-10-1"><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">count</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="mi">0</span><span class="p">;</span>
+</span><span id="__span-10-2"><a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">count</span><span class="w"> </span><span class="o">&lt;</span><span class="w"> </span><span class="mi">5</span><span class="p">)</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-10-3"><a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Count: %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">count</span><span class="p">);</span>
+</span><span id="__span-10-4"><a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="n">count</span><span class="o">++</span><span class="p">;</span>
+</span><span id="__span-10-5"><a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="p">}</span>
+</span></code></pre></div></p>
+<p><strong>Do-While Loops</strong>: Execute at least once, then check condition
+<div class="language-c highlight"><pre><span></span><code><span id="__span-11-1"><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="kt">int</span><span class="w"> </span><span class="n">input</span><span class="p">;</span>
+</span><span id="__span-11-2"><a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="k">do</span><span class="w"> </span><span class="p">{</span>
+</span><span id="__span-11-3"><a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Enter a positive number: &quot;</span><span class="p">);</span>
+</span><span id="__span-11-4"><a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="n">scanf</span><span class="p">(</span><span class="s">&quot;%d&quot;</span><span class="p">,</span><span class="w"> </span><span class="o">&amp;</span><span class="n">input</span><span class="p">);</span>
+</span><span id="__span-11-5"><a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="p">}</span><span class="w"> </span><span class="k">while</span><span class="w"> </span><span class="p">(</span><span class="n">input</span><span class="w"> </span><span class="o">&lt;=</span><span class="w"> </span><span class="mi">0</span><span class="p">);</span>
+</span></code></pre></div></p>
+<h2 id="the-c-pre-processor-cpp">The C Pre-Processor (CPP)</h2>
+<p>The C preprocessor runs before compilation and handles directives that begin with <code>#</code>. These directives modify your source code before it's compiled.</p>
+<p><strong>Include Directive</strong>: Imports header files
+<div class="language-c highlight"><pre><span></span><code><span id="__span-12-1"><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&lt;stdio.h&gt;</span><span class="c1">   // System header (standard library)</span>
+</span><span id="__span-12-2"><a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a><span class="cp">#include</span><span class="w"> </span><span class="cpf">&quot;myheader.h&quot;</span><span class="c1">  // User-defined header (local file)</span>
+</span></code></pre></div></p>
+<p><strong>Define Directive</strong>: Creates macros and constants
+<div class="language-c highlight"><pre><span></span><code><span id="__span-13-1"><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a><span class="cp">#define PI 3.14159</span>
+</span><span id="__span-13-2"><a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a><span class="cp">#define MAX_SIZE 100</span>
+</span><span id="__span-13-3"><a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a><span class="cp">#define SQUARE(x) ((x) * (x))</span>
+</span><span id="__span-13-4"><a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>
+</span><span id="__span-13-5"><a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a><span class="c1">// Usage</span>
+</span><span id="__span-13-6"><a id="__codelineno-13-6" name="__codelineno-13-6" href="#__codelineno-13-6"></a><span class="kt">double</span><span class="w"> </span><span class="n">area</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="n">PI</span><span class="w"> </span><span class="o">*</span><span class="w"> </span><span class="n">SQUARE</span><span class="p">(</span><span class="n">radius</span><span class="p">);</span>
+</span></code></pre></div>
+Macros are simple text replacements. Notice the parentheses in <code>SQUARE(x)</code> to avoid unexpected behavior with operator precedence.</p>
+<p><strong>Conditional Compilation</strong>: Include or exclude code based on conditions
+<div class="language-c highlight"><pre><span></span><code><span id="__span-14-1"><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="cp">#define DEBUG</span>
+</span><span id="__span-14-2"><a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a>
+</span><span id="__span-14-3"><a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="cp">#ifdef DEBUG</span>
+</span><span id="__span-14-4"><a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="n">printf</span><span class="p">(</span><span class="s">&quot;Debug: x = %d</span><span class="se">\n</span><span class="s">&quot;</span><span class="p">,</span><span class="w"> </span><span class="n">x</span><span class="p">);</span>
+</span><span id="__span-14-5"><a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="cp">#endif</span>
+</span><span id="__span-14-6"><a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a>
+</span><span id="__span-14-7"><a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="cp">#ifndef MAX_VALUE</span>
+</span><span id="__span-14-8"><a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">    </span><span class="cp">#define MAX_VALUE 1000</span>
+</span><span id="__span-14-9"><a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="cp">#endif</span>
+</span></code></pre></div>
+This is useful for platform-specific code or enabling debug output during development.</p>
 
 
-<!-- Actions -->
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Actions -->
 
 
-<!--
-  Hack: check whether the content contains a h1 headline. If it doesn't, the
-  page title (or respectively site name) is used as the main headline.
--->
-
-  <h1>Reviewing C</h1>
 
 
-<!-- Page content -->
 
 
-<!-- Source file information -->
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Render date of last update -->
 
 
-<!-- Render date of creation -->
 
 
-<!-- ---------------------------------------------------------------------- -->
-
-<!-- Render authors -->
-
-
-<!-- ---------------------------------------------------------------------- -->
-
-<!-- Render committers from GitHub -->
-
-
-<!-- Render committers from GitLab -->
-
-
-<!-- Render committers -->
-
-
-<!-- ---------------------------------------------------------------------- -->
-
-<!-- Determine date of last update -->
-
-
-<!-- Source file information -->
-
-
-<!-- Was this page helpful? -->
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Determine feedback configuration -->
-
-
-<!-- Determine whether to show feedback -->
-
-
-<!-- Was this page helpful? -->
-
-
-<!-- Comment system -->
-<!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Comment system -->
                 
               </article>
             </div>
           
-
-          <!-- User preference: content -->
-          <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- User-preference: link content tabs -->
-
-
-<!-- Switch to content tab target -->
-<script>
-  var target = document.getElementById(location.hash.slice(1))
-  if (target && target.name)
-    target.checked = target.name.startsWith("__tabbed_")
-</script>
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
         </div>
-
-        <!-- Back-to-top button -->
         
       </main>
-
-      <!-- Footer -->
       
-        <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Footer -->
-<footer class="md-footer">
-
-  <!-- Link to previous and/or next page -->
+        <footer class="md-footer">
   
-
-  <!-- Further information -->
   <div class="md-footer-meta md-typeset">
     <div class="md-footer-meta__inner md-grid">
-      <!--
-  Copyright (c) 2016-2025 Martin Donath <martin.donath@squidfunk.com>
-
-  Permission is hereby granted, free of charge, to any person obtaining a copy
-  of this software and associated documentation files (the "Software"), to
-  deal in the Software without restriction, including without limitation the
-  rights to use, copy, modify, merge, publish, distribute, sublicense, and/or
-  sell copies of the Software, and to permit persons to whom the Software is
-  furnished to do so, subject to the following conditions:
-
-  The above copyright notice and this permission notice shall be included in
-  all copies or substantial portions of the Software.
-
-  THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
-  IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
-  FITNESS FOR A PARTICULAR PURPOSE AND NON-INFRINGEMENT. IN NO EVENT SHALL THE
-  AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
-  LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING
-  FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS
-  IN THE SOFTWARE.
--->
-
-<!-- Copyright and theme information -->
-<div class="md-copyright">
+      <div class="md-copyright">
   
   
     Made with
-    <a
-      href="https://squidfunk.github.io/mkdocs-material/"
-      target="_blank" rel="noopener"
-    >
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
       Material for MkDocs
     </a>
   
 </div>
-
-      <!-- Social links -->
       
     </div>
   </div>
 </footer>
       
     </div>
-
-    <!-- Dialog -->
     <div class="md-dialog" data-md-component="dialog">
       <div class="md-dialog__inner md-typeset"></div>
     </div>
-
-    <!-- Progress indicator -->
     
-
-    <!-- Consent -->
     
-
-    <!-- Theme-related configuration -->
     
       
-
-      <!-- Extra configuration -->
       
+      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.2c215733.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="../../assets/javascripts/bundle.79ae519e.min.js"></script>
       
-
-      <!-- Versioning --><!-- Configuration -->
-      <script id="__config" type="application/json">{"annotate": null, "base": "../..", "features": ["navigation.tabs", "navigation.tabs.sticky", "navigation.path", "navigation.prune", "navigation.sections", "navigation.expand"], "search": "../../assets/javascripts/workers/search.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
-    
-
-    <!-- Theme-related JavaScript -->
-    
-      <script src="../../assets/javascripts/bundle.js"></script>
-
-      <!-- Custom JavaScript -->
+        <script src="../../javascript/wcag_fixes.js"></script>
+      
+        <script src="../../javascript/mathjax.js"></script>
+      
+        <script src="https://unpkg.com/mathjax@3/es5/tex-mml-chtml.js"></script>
       
     
   </body>
