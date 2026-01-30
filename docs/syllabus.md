@@ -9,7 +9,7 @@
 
 On-Campus, 4 Credits
 
-Room: A135
+**Room**: Kunsela Hall A135
 <br>
 
 **Meeting Times:** Mondays and Wednesdays, 12:00pm - 1:50pm
@@ -17,6 +17,8 @@ Room: A135
 
 ## Office Hours and Contact Info
 **Instructor:** John Szwakob III (Mr. S)
+
+**Office Location:** Kunsela Hall C127
 
 **Office Hours:**
 - Mondays 2:00pm - 4:00pm
