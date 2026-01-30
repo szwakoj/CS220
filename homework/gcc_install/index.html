@@ -1005,35 +1005,35 @@
 <p>There are many methods to install gcc on Windows-based system, each attempting to stream-line some part of the process. We will be using WinLibs GCC pre-compiled version of the collection and manually adding it to the PATH so that you may use the programs in Windows CMD.</p>
 <ol>
 <li>Go to <a href="https://winlibs.com/">https://winlibs.com/</a>:
-   <img alt="The homepage of the WinLibs website" src="../img/win_install_1.png" /></li>
+   <img alt="The homepage of the WinLibs website" src="../../img/win_install_1.png" /></li>
 <li>Scroll down to the <strong>Download</strong> section:
-   <img alt="The homepage of the WinLibs website, focused on the Downloads section" src="../img/win_install_2.png" /></li>
+   <img alt="The homepage of the WinLibs website, focused on the Downloads section" src="../../img/win_install_2.png" /></li>
 <li>Click on the red-circled "Download it here" to download the latest release for Windows 64-bit systems. If you need the 32-bit version for some reason, it is below. All modern computers are 64-bit so you should be fine with that.</li>
 <li>That will download a zip file inside of your "Downloads" folder:
-   <img alt="The Windows file explorer showing the downloaded zip" src="../img/win_install_3.png" /></li>
+   <img alt="The Windows file explorer showing the downloaded zip" src="../../img/win_install_3.png" /></li>
 <li>Right click on the file and select "Extract All", or use the top tools to select the same option as in the image:
-   <img alt="The Windows file explorer showing how to extract the zip contents" src="../img/win_install_4.png" /></li>
+   <img alt="The Windows file explorer showing how to extract the zip contents" src="../../img/win_install_4.png" /></li>
 <li>That will open up a new dialog box asking where to extract the file contents to, click "Browse":
-   <img alt="The Windows file explorer showing how to extract the zip contents" src="../img/win_install_5.png" /></li>
+   <img alt="The Windows file explorer showing how to extract the zip contents" src="../../img/win_install_5.png" /></li>
 <li>
 <p>Using the File Explorer's side bar menu, scroll down to find "This PC-&gt;C:", click it, then press the "Select Folder" button, as indicated:
-   <img alt="The Windows file explorer showing how to extract the zip contents into the proper place in the computer" src="../img/win_install_6.png" /></p>
+   <img alt="The Windows file explorer showing how to extract the zip contents into the proper place in the computer" src="../../img/win_install_6.png" /></p>
 </li>
 <li>
 <p>Click "Extract", and wait for the process to complete:</p>
 </li>
 <li>
 <p>The compiler is now installed, however your windows Command Prompt cannot use the compiler and other tools until their locations have been added to the PATH. Click the search bar on the task bar and search for  "environment variables", click on the "Edit the system environment variables" option:
-   <img alt="The Windows search bar that is searching for &quot;environment variables&quot; with &quot;Edit the system environment variables&quot; circled." src="../img/win_install_7.png" /></p>
+   <img alt="The Windows search bar that is searching for &quot;environment variables&quot; with &quot;Edit the system environment variables&quot; circled." src="../../img/win_install_7.png" /></p>
 </li>
 <li>Click on the "Environment Variables..." button:
-    <img alt="A &quot;System Properties window that is in the &quot;Advanced&quot; tab and the button &quot;Environment Variables&quot; is circled in blue." src="../img/win_install_8.png" /></li>
+    <img alt="A &quot;System Properties window that is in the &quot;Advanced&quot; tab and the button &quot;Environment Variables&quot; is circled in blue." src="../../img/win_install_8.png" /></li>
 <li>With the new menu that pops up, click on the "Path" option under "System variables", NOT the one that is for your account. With that selected click on the "Edit..." button:
-    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above" src="../img/win_install_9.png" /></li>
+    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above" src="../../img/win_install_9.png" /></li>
 <li>In the new window, click "New" to add a new line to the PATH, then click "Browse...":
-    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above" src="../img/win_install_10.png" /></li>
+    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above" src="../../img/win_install_10.png" /></li>
 <li>With the new file explorer open, go to "This PC-&gt;Local Disk (C:)-&gt;mingw64-&gt;bin", with "bin" as the selected folder:
-    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above." src="../img/win_install_11.png" /></li>
+    <img alt="Windows &quot;Environment Variables&quot; editing screen with indicators to follow the directions above." src="../../img/win_install_11.png" /></li>
 <li>Click "OK"</li>
 <li>Click "OK"</li>
 <li>Click "OK"</li>
@@ -1041,7 +1041,7 @@
 <li>GCC has now been installed on your Windows computer! To test this, search cmd in the search bar to open the command prompt</li>
 <li>Type <code>gcc</code>, and press enter</li>
 <li>This should result in the following error:
-    <img alt="A Windows Command Prompt that has run the command &quot;gcc&quot; without any input parameters, causing the error &quot;gcc: fatal error: no input files compilation terminated&quot;" src="../img/win_install_12.png" /></li>
+    <img alt="A Windows Command Prompt that has run the command &quot;gcc&quot; without any input parameters, causing the error &quot;gcc: fatal error: no input files compilation terminated&quot;" src="../../img/win_install_12.png" /></li>
 <li>If something else happens, try the process again pay sure to follow the instructions and that you are always downloading and installing into local directories and not those on "OneDrive" or other such networked drives</li>
 <li>If you continue to struggle, bring it up in class, or email me</li>
 </ol>
