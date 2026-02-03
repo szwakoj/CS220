@@ -776,6 +776,13 @@
 
 
 <h1 id="c-compilation-objects">C Compilation Objects</h1>
+<p>To go from human-readable C code to a running program on a computer requires a few steps of processing before being converted to the <strong>machine code</strong> that ultimately is what the computer runs on the CPU. </p>
+<p>This lab will use a few <code>gcc</code> command flags to extract our those intermediate forms of the program we made. To reiterate the compilation process in the <a href="../../lessons/2_reviewing_c/">C review lesson</a>, there are four main steps in C compilation:
+1. <strong>Preprocessing</strong>: The C preprocessor (CPP) formats the source code using macros like <code>#include</code> or <code>#define</code>, including needed headers and applying any user-defined changes before passing to the next step
+2. <strong>Compilation</strong>: The compiler translates C source code into assembly language
+3. <strong>Assembly</strong>: The assembler then converts the assembly code into machine code, producing object files, <code>.o</code> or <code>.obj</code>, as a result
+4. <strong>Linking</strong>: The linker orders the object files properly and combines them into a single executable program that is ready to run on the target system</p>
+<p>Each one of these steps produces distinct products that we can look closer at to understand the process a bit more. In order to do that, we will need another tool to be added to our system PATHs. <code>xxd</code> is a </p>
 
 
 
