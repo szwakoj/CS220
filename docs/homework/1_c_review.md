@@ -74,7 +74,7 @@ Using these ideas in this homework you will:
 - Color Channel Fragmentation and Mixing
 ## **Section 1**: Black and White & Greyscale Images
 
-Click [here](../homework/HW1_Start.zip), to download the starting point that I have created for you. It is also on Brightspace, under Content->Homework 1. Unzip it into the place you are completing Homework 1, Section 1. 
+Click [here](../homework/HW1_start.zip), to download the starting point that I have created for you. It is also on Brightspace, under Content->Homework 1. Unzip it into the place you are completing Homework 1, Section 1. 
 
 This code will output a simple greyscale image that is a gradient that goes from left to right. Nothing special.
 
