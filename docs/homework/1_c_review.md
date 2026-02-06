@@ -46,6 +46,7 @@ Let's explain line-by-line:
 4. `0 0 0 0 ...` - This is the actual contents of the file. For black and white grey scale images each number represents the value for that pixel to be drawn to the screen.
 
 That "magic number" is the format that is used for identifying how the data will be stored, either as ascii chars that are viewable, or raw binary format for being compact and closer to reality. These are the magic numbers for `.pbm`, `.pgm`, and `.ppm`
+
 - `P1`, `P2`, `P3` = ASCII format (human-readable)
 - `P4`, `P5`, `P6` = Raw binary format (more compact)
 
@@ -54,24 +55,30 @@ Fortunately, Sublime Text and other text editors like VSCode and view this image
 These types of files were picked for this assignment because they are a simple format that represents very closely to how we write directly to memory. With this in mind, we will only be allowing the the use of C binary and hexadecimal numbers for all values other than powers of 2 (0, 1, 2, 4, 8, 16, ...) and heavily relying on C binary/bitwise operators.
 
 To use C binary and hexadecimal number representations:
+
 - Prefix with `0b` for binary numbers
 	- `0b1010` for the number 10
 - Prefix with `0x` for hex numbers
 	- `0xABC` for the number 2748
 
 Using these ideas in this homework you will:
+
 - Write/edit simple binary images in black and white
 - Write more complex color images
 
 **Section 1**: Black and White & Greyscale Images
+
 - Random Noise (BW and Greyscale)
 - Bit-Plane an Image
 - Bitwise Patterns
+
 **Section 2**: Color Images
+
 - Random Noise 
 - Bitwise Patterns
 - Bit-Plane an Image
 - Color Channel Fragmentation and Mixing
+
 ## **Section 1**: Black and White & Greyscale Images
 
 Click [here](../homework/HW1_start.zip), to download the starting point that I have created for you. It is also on Brightspace, under Content->Homework 1. Unzip it into the place you are completing Homework 1, Section 1. 
@@ -79,14 +86,17 @@ Click [here](../homework/HW1_start.zip), to download the starting point that I h
 This code will output a simple greyscale image that is a gradient that goes from left to right. Nothing special.
 
 It also contains the images you will read in and use for the parts that require inputs.
+
 ### Overview
 
 Using the starting point as a going off point you are to create a C project with two main files for this section:
+
 1. `black_and_white.c` - Function declarations for each problem without them being used
 2. `main.c` - Using all of the aforementioned functions to generate all images in the current directory with correct names
 	1. Should `#include "black_and_white.c"`
 
 All generated images are to be saved as `.pgm` files in this section.
+
 ### Task 1: Random Noise Generator (15 points)
 
 Create a function that generates random noise images in both black & white and greyscale
@@ -292,6 +302,7 @@ void mix_channels(const char* input_file_a, const char* input_file_b,
 
 - `separate_channels`: Create three color images, for each color channel, where all other color channels are removed
 - `mix_channels`: Take two images and xor their color channels together
+
 ### Section 2 Grading Rubric
 
 - Task 1: Color random noise (15 points)
