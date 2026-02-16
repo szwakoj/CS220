@@ -55,6 +55,7 @@ nav:
   - Lessons:
     - Introduction: lessons/1_introduction.md
     - Reviewing C: lessons/2_reviewing_c.md
+    - Binary and Hex: lessons/3_binary_hex.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
