@@ -169,17 +169,437 @@ From this general description, we can identify several important principles that
 
 With a general framework for all number systems, let's shrink back down to what we actually will be doing. Recall that all information on a computer is represented as binary numbers due to being made of transistors. This means all information must be represented using only two symbols, 0 and 1, for the transistors possible off and on state, respectively. This number system is therefore **base-2** and is the reason it is called **binary** (prefix bi- meaning two). 
 
-This results in the following table
+This results in the following table:
 
+|**Number System Name**|Binary|
+|---|---|
+|**Base Number**|2|
+|**Digits**|0, 1|
 
-### Converting to Binary
+Just like with decimal, binary uses positional notation where each position represents a power of 2:
 
-### Converting from Binary
+| **Position**      | 7     | 6     | 5     | 4     | 3     | 2     | 1     | 0     |
+| ----------------- | ----- | ----- | ----- | ----- | ----- | ----- | ----- | ----- |
+| **Power of 2**    | $2^7$ | $2^6$ | $2^5$ | $2^4$ | $2^3$ | $2^2$ | $2^1$ | $2^0$ |
+| **Decimal Value** | 128   | 64    | 32    | 16    | 8     | 4     | 2     | 1     |
 
-## The Hexadecimal System
+**Example:** The binary number $1011_2$ breaks down as:
 
-### Converting to Hexadecimal
+|**Position**|3|2|1|0|
+|---|---|---|---|---|
+|**Weight**|$2^3$|$2^2$|$2^1$|$2^0$|
+|**Digit**|1|0|1|1|
 
-### Converting from Hexadecimal
+$$1011_2 = 1 \times 2^3 + 0 \times 2^2 + 1 \times 2^1 + 1 \times 2^0$$
+
+$$= 8 + 0 + 2 + 1 = 11_{10}$$
+
+So the binary number $1011_2$ equals the decimal number $11_{10}$.
+
+Notice that binary numbers get long very quickly. To represent the decimal number 255, you need eight binary digits: $11111111_2$. This is one of the trade-offs of using a smaller base, you need more positions to represent the same values, but you only need to work with two symbols.
+
+### Converting from Decimal to Binary
+
+There are multiple methods to convert from decimal to binary, but the most straightforward is the **division-by-2 method** (also called the repeated division method).
+
+**The Division-by-2 Method:**
+
+1. Divide the decimal number by 2
+2. Record the remainder (this will be either 0 or 1)
+3. Divide the quotient from step 1 by 2
+4. Record the remainder
+5. Repeat until the quotient is 0
+6. Read the remainders from bottom to top this is your binary number
+
+**Example:** Convert $45_{10}$ to binary
+
+| Step | Division | Quotient | Remainder |
+| ---- | -------- | -------- | --------- |
+| 1    | 45 ÷ 2   | 22       | **1** ←   |
+| 2    | 22 ÷ 2   | 11       | **0**     |
+| 3    | 11 ÷ 2   | 5        | **1**     |
+| 4    | 5 ÷ 2    | 2        | **1**     |
+| 5    | 2 ÷ 2    | 1        | **0**     |
+| 6    | 1 ÷ 2    | 0        | **1** ↑   |
+
+Reading the remainders from bottom to top: $101101_2$
+
+We can verify: $1 \times 2^5 + 0 \times 2^4 + 1 \times 2^3 + 1 \times 2^2 + 0 \times 2^1 + 1 \times 2^0 = 32 + 8 + 4 + 1 = 45_{10}$ ✓
+
+**Alternative Method: Subtraction Method**
+
+Another approach is to subtract the largest power of 2 that fits into your number, working from left to right:
+
+**Example:** Convert $45_{10}$ to binary
+
+1. Largest power of 2 ≤ 45 is $2^5 = 32$. Place a 1 in position 5. Remainder: $45 - 32 = 13$
+2. Largest power of 2 ≤ 13 is $2^3 = 8$. Place a 1 in position 3. Remainder: $13 - 8 = 5$
+3. Largest power of 2 ≤ 5 is $2^2 = 4$. Place a 1 in position 2. Remainder: $5 - 4 = 1$
+4. Largest power of 2 ≤ 1 is $2^0 = 1$. Place a 1 in position 0. Remainder: $1 - 1 = 0$
+5. Positions 4 and 1 were skipped, so they get 0s
+
+Result: $101101_2$
+
+Both methods give the same answer; use whichever makes more sense to you.
+
+### Converting from Binary to Decimal
+
+Converting from binary to decimal is more straightforward, we simply apply the general formula for number systems that we learned earlier.
+
+**Method:** Multiply each digit by its position weight (power of 2) and sum the results.
+
+**Example 1:** Convert $11010_2$ to decimal
+
+|**Position**|4|3|2|1|0|
+|---|---|---|---|---|---|
+|**Weight**|$2^4$|$2^3$|$2^2$|$2^1$|$2^0$|
+|**Digit**|1|1|0|1|0|
+|**Value**|16|8|0|2|0|
+
+$$11010_2 = 1 \times 16 + 1 \times 8 + 0 \times 4 + 1 \times 2 + 0 \times 1 = 16 + 8 + 2 = 26_{10}$$
+
+**Example 2:** Convert $10000001_2$ to decimal
+
+$$10000001_2 = 1 \times 2^7 + 0 \times 2^6 + 0 \times 2^5 + 0 \times 2^4 + 0 \times 2^3 + 0 \times 2^2 + 0 \times 2^1 + 1 \times 2^0$$
+
+$$= 128 + 1 = 129_{10}$$
+
+**Quick Tip:** You only need to add the positions where the digit is 1. All the 0s contribute nothing to the sum, so you can skip them entirely.
+
+## The Hexadecimal Number System
+
+While binary is the language computers speak natively, it has a significant drawback for human use: binary numbers get extremely long very quickly. The number $11111111111111111111111111111111_2$ is hard to read, hard to remember, and easy to make mistakes with. This is where **hexadecimal** comes in.
+
+**Hexadecimal** (often shortened to **hex**) is a **base-16** number system. The prefix "hexa-" means six and "decimal" means ten, so hexadecimal literally means "six and ten" or sixteen. Hexadecimal provides a much more compact way to represent binary data while still being easy to convert back and forth.
+
+The challenge with base-16 is that we need 16 unique digits, but we only have 10 numerical symbols (0-9). The solution? We borrow from the alphabet. The digits A through F represent the values 10 through 15:
+
+|**Number System Name**|Hexadecimal|
+|---|---|
+|**Base Number**|16|
+|**Digits**|0-9, A,B,C,D,E,F|
+
+Here's how the hexadecimal digits map to decimal values:
+
+|**Hex Digit**|0|1|2|3|4|5|6|7|8|9|A|B|C|D|E|F|
+|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|---|
+|**Decimal**|0|1|2|3|4|5|6|7|8|9|10|11|12|13|14|15|
+
+Just like decimal and binary, hexadecimal uses positional notation with powers of 16:
+
+|**Position**|4|3|2|1|0|
+|---|---|---|---|---|---|
+|**Power of 16**|$16^4$|$16^3$|$16^2$|$16^1$|$16^0$|
+|**Decimal Value**|65,536|4,096|256|16|1|
+
+**Example:** The hexadecimal number $2A3F_{16}$ breaks down as:
+
+|**Position**|3|2|1|0|
+|---|---|---|---|---|
+|**Weight**|$16^3$|$16^2$|$16^1$|$16^0$|
+|**Digit**|2|A|3|F|
+|**Value**|2|10|3|15|
+
+$$2A3F_{16} = 2 \times 16^3 + 10 \times 16^2 + 3 \times 16^1 + 15 \times 16^0$$
+
+$$= 2 \times 4096 + 10 \times 256 + 3 \times 16 + 15 \times 1$$
+
+$$= 8192 + 2560 + 48 + 15 = 10815_{10}$$
+
+Notice how much more compact hexadecimal is compared to binary. The decimal number 10,815 would be $10101000111111_2$ in binary (14 digits), but only $2A3F_{16}$ in hexadecimal (4 digits).
+
+### Converting from Decimal to Hexadecimal
+
+Just like with binary, we use the **division method**, but this time we divide by 16.
+
+**The Division-by-16 Method:**
+
+1. Divide the decimal number by 16
+2. Record the remainder (this will be 0-15; use A-F for 10-15)
+3. Divide the quotient from step 1 by 16
+4. Record the remainder
+5. Repeat until the quotient is 0
+6. Read the remainders from bottom to top, this is your hexadecimal number
+
+**Example:** Convert $2748_{10}$ to hexadecimal
+
+|Step|Division|Quotient|Remainder (Decimal)|Remainder (Hex)|
+|---|---|---|---|---|
+|1|2748 ÷ 16|171|12|**C** ←|
+|2|171 ÷ 16|10|11|**B**|
+|3|10 ÷ 16|0|10|**A** ↑|
+
+Reading the remainders from bottom to top: $ABC_{16}$
+
+We can verify: $10 \times 16^2 + 11 \times 16^1 + 12 \times 16^0 = 2560 + 176 + 12 = 2748_{10}$ ✓
+
+**Example 2:** Convert $255_{10}$ to hexadecimal
+
+|Step|Division|Quotient|Remainder (Decimal)|Remainder (Hex)|
+|---|---|---|---|---|
+|1|255 ÷ 16|15|15|**F** ←|
+|2|15 ÷ 16|0|15|**F** ↑|
+
+Result: $FF_{16}$
+
+This is a number you'll see frequently in computer science. $FF_{16}$ represents the maximum value that can be stored in 8 bits.
+
+### Converting from Hexadecimal to Decimal
+
+Converting from hexadecimal to decimal follows the same pattern as binary to decimal.
+
+**Method:** Multiply each digit by its position weight (power of 16) and sum the results. Remember to convert A-F to their decimal equivalents (10-15) before multiplying.
+
+**Example 1:** Convert $1F4_{16}$ to decimal
+
+|**Position**|2|1|0|
+|---|---|---|---|
+|**Weight**|$16^2$|$16^1$|$16^0$|
+|**Digit**|1|F|4|
+|**Value**|1|15|4|
+
+$$1F4_{16} = 1 \times 256 + 15 \times 16 + 4 \times 1 = 256 + 240 + 4 = 500_{10}$$
+
+**Example 2:** Convert $DEAD_{16}$ to decimal
+
+$$DEAD_{16} = 13 \times 16^3 + 10 \times 16^2 + 10 \times 16^1 + 13 \times 16^0$$
+
+$$= 13 \times 4096 + 10 \times 256 + 10 \times 16 + 13 \times 1$$
+
+$$= 53248 + 2560 + 160 + 13 = 57005_{10}$$
+
+### The Connection Between Binary and Hexadecimal
+
+Here's where hexadecimal becomes truly useful: there's a remarkably simple relationship between binary and hexadecimal that makes conversion between them trivial. This is because 16 is a power of 2: $16 = 2^4$.
+
+This means that **one hexadecimal digit perfectly represents exactly four binary digits**. This 4-to-1 mapping is what makes hexadecimal so practical for representing binary data.
+
+Here's the complete mapping:
+
+| **Hex** | **Binary** | **Decimal** | **Hex** | **Binary** | **Decimal** |
+| ------- | ---------- | ----------- | ------- | ---------- | ----------- |
+| 0       | 0000       | 0           | 8       | 1000       | 8           |
+| 1       | 0001       | 1           | 9       | 1001       | 9           |
+| 2       | 0010       | 2           | A       | 1010       | 10          |
+| 3       | 0011       | 3           | B       | 1011       | 11          |
+| 4       | 0100       | 4           | C       | 1100       | 12          |
+| 5       | 0101       | 5           | D       | 1101       | 13          |
+| 6       | 0110       | 6           | E       | 1110       | 14          |
+| 7       | 0111       | 7           | F       | 1111       | 15          |
+
+**Converting Binary to Hexadecimal:**
+
+1. Group the binary digits into sets of 4, starting from the right
+2. If the leftmost group has fewer than 4 digits, pad with zeros on the left
+3. Convert each group of 4 binary digits to its hexadecimal equivalent
+4. Concatenate the hex digits
+
+**Example 1:** Convert $11010111_2$ to hexadecimal
+
+1. Group into fours: $1101$ $0111$
+2. Convert each group:
+    - $1101_2 = D_{16}$
+    - $0111_2 = 7_{16}$
+3. Result: $D7_{16}$
+
+**Example 2:** Convert $1011111010_2$ to hexadecimal
+
+1. Group into fours from right: $10$ $1111$ $1010$
+2. Pad the leftmost group: $0010$ $1111$ $1010$
+3. Convert each group:
+    - $0010_2 = 2_{16}$
+    - $1111_2 = F_{16}$
+    - $1010_2 = A_{16}$
+4. Result: $2FA_{16}$
+
+**Converting Hexadecimal to Binary:**
+
+This is even easier, just replace each hex digit with its 4-bit binary equivalent.
+
+**Example 1:** Convert $3C_{16}$ to binary
+
+- $3_{16} = 0011_2$
+- $C_{16} = 1100_2$
+- Result: $00111100_2$ (or $111100_2$ without leading zeros)
+
+**Example 2:** Convert $BEEF_{16}$ to binary
+
+- $B_{16} = 1011_2$
+- $E_{16} = 1110_2$
+- $E_{16} = 1110_2$
+- $F_{16} = 1111_2$
+- Result: $1011111011101111_2$
+
+This direct conversion is why hexadecimal is so popular in computer science. Instead of writing out 32 or 64 binary digits, programmers can write 8 or 16 hex digits and convert trivially when needed. It's a human-friendly notation for machine-friendly data.
 
 ## Important Terms
+
+Now that we understand binary and hexadecimal number systems, there are several important terms used in computer science when working with these representations. These terms describe specific quantities and groupings of binary digits that are fundamental to how computers organize and process data.
+
+### Bit
+
+A **bit** (short for **binary digit**) is the smallest unit of data in a computer. It can have only two possible values: 0 or 1. This directly corresponds to the two states of a transistor: off or on, no voltage or voltage, false or true.
+
+Everything in a computer, everything from numbers, letters, images, videos, or even programs, are all ultimately represented as a collection of bits. When we say a computer is "digital," we mean it works exclusively with these discrete binary values.
+
+**Examples:**
+
+- The binary number $1011_2$ consists of 4 bits
+- A single bit can represent: on/off, true/false, yes/no
+- The letter 'A' in ASCII is represented as $01000001_2$, which is 8 bits
+
+### Nibble
+
+A **nibble** (sometimes spelled **nybble**) is a group of exactly **4 bits**. The term is a playful reference to a nibble being half of a byte (which we'll discuss next).
+
+Nibbles are particularly important because of their relationship to hexadecimal: one nibble corresponds exactly to one hexadecimal digit, as we saw in the previous section.
+
+**Examples:**
+
+- The binary number $1011_2$ is one nibble
+- The binary number $11010111_2$ consists of two nibbles: $1101$ and $0111$
+- The hexadecimal digit $F_{16}$ represents the nibble $1111_2$
+
+**Why Nibbles Matter:**
+
+- Each hexadecimal digit represents exactly one nibble
+- This makes it easy to visually convert between binary and hex
+- Nibbles are often used when working with binary-coded decimal (BCD) systems
+- They're useful for representing single hexadecimal digits in hardware
+
+### Byte
+
+A **byte** is a group of **8 bits** and is the fundamental unit of memory in most modern computers. Almost all computer operations, memory addressing, and data storage are organized around bytes.
+
+The byte is important enough that it's the standard unit used to measure computer memory and storage capacity. When you see kilobytes (KB), megabytes (MB), or gigabytes (GB), these are all based on bytes.
+
+**Examples:**
+
+- The binary number $11010111_2$ is one byte
+- One byte can represent decimal values from $0$ to $255$ (or $00000000_2$ to $11111111_2$)
+- The hexadecimal number $FF_{16}$ represents one byte with all bits set to 1
+- One ASCII character is stored in exactly one byte
+
+**Why Bytes Matter:**
+
+- Memory addresses typically point to byte locations
+- Most data types are measured in bytes (e.g., a 32-bit integer is 4 bytes)
+- File sizes are measured in bytes and their multiples
+- One byte can represent 256 different values ($2^8 = 256$)
+
+**Important Note:** A byte always has exactly 8 bits. This wasn't always universal historically (some early computers used different byte sizes), but 8 bits per byte has been the standard since the 1960s and is essentially universal today.
+
+### Word
+
+A **word** is the natural unit of data used by a particular computer architecture. Unlike bit, nibble, and byte, which have fixed sizes, a word's size varies depending on the processor design.
+
+The word size determines several important characteristics of a computer:
+
+- How much data the processor can handle in a single operation
+- The maximum memory address the processor can directly access
+- The size of the processor's registers
+
+**Common Word Sizes:**
+
+- **8-bit processors:** 1 byte (8 bits) 
+	- early microprocessors like the Intel 8080
+- **16-bit processors:** 2 bytes (16 bits)  
+	- processors like the Intel 8086
+- **32-bit processors:** 4 bytes (32 bits) 
+	- common in desktops from the 1990s-2000s
+- **64-bit processors:** 8 bytes (64 bits) 
+	- standard in modern computers today
+
+**Examples:**
+
+- On a 32-bit system, a word is $32$ bits or $4$ bytes
+- On a 64-bit system, a word is $64$ bits or $8$ bytes
+- A 64-bit processor can process a word like $0xFFFFFFFFFFFFFFFF_{16}$ in a single operation
+
+**Why Word Size Matters:**
+
+- Determines the maximum amount of RAM that can be directly addressed
+    - 32-bit: Can address up to $2^{32}$ bytes = 4 GB of RAM
+    - 64-bit: Can address up to $2^{64}$ bytes = 16 exabytes of RAM (theoretically)
+- Affects the precision of integer arithmetic operations
+- Influences overall system performance and architecture design
+
+### Most Significant Bit (MSB) and Least Significant Bit (LSB)
+
+In any binary number, the bits have different levels of importance based on their position. The **most significant bit (MSB)** is the bit in the highest-value position (leftmost), while the **least significant bit (LSB)** is the bit in the lowest-value position (rightmost).
+
+**Example:** In the byte $10110011_2$
+
+```
+  MSB                    LSB
+   ↓                      ↓
+   1  0  1  1  0  0  1  1
+  128 64 32 16  8  4  2  1  ← position values
+```
+
+- The MSB is $1$ (leftmost), representing $128_{10}$
+- The LSB is $1$ (rightmost), representing $1_{10}$
+- Changing the MSB changes the value by 128
+- Changing the LSB changes the value by only 1
+
+**Why MSB and LSB Matter:**
+
+- The MSB in signed integers often represents the sign (positive/negative)
+- The LSB is important for parity checks and determining even/odd
+- Bit ordering (endianness) refers to whether MSB or LSB is stored first in memory
+- When doing bit shifts, knowing which end is which is crucial
+
+### Number Notation Conventions
+
+When writing numbers in different bases, it's essential to indicate which base you're using to avoid confusion. There are several common conventions:
+
+**Subscript Notation:**
+
+- $10111_2$ means the number 10111 in binary (base-2)
+- $2F_{16}$ means the number 2F in hexadecimal (base-16)
+- $156_{10}$ means the number 156 in decimal (base-10)
+
+This is the notation used in mathematical contexts and in this document.
+
+**Prefix Notation (Programming):**
+
+- `0b10111` or `0B10111` -  binary (used in Python, C++14 and later, and others)
+- `0x2F` or `0X2F` - hexadecimal (used in C, C++, Java, Python, and many others)
+- `0o177` or `0O177` - octal, base-8 (used in Python and some others)
+- No prefix typically means decimal
+
+**Examples in Code:**
+
+```C
+binary_num = 0b10111;     # Binary: 23 in decimal
+hex_num = 0x2F;           # Hexadecimal: 47 in decimal
+decimal_num = 156;        # Decimal: 156
+```
+
+**Suffix Notation:**
+
+- Sometimes you'll see `10111b` or `2Fh` to indicate binary and hexadecimal
+- This is less common but appears in some assembly languages and documentation
+
+**Context Matters:** When working with computer systems, pay attention to the notation being used. A number like $10110$ could mean:
+
+- Ten thousand, one hundred ten in decimal
+- Twenty-two in binary ($10110_2 = 22_{10}$)
+- Sixty-six thousand, five hundred seventy-six in hexadecimal ($10110_{16} = 66576_{10}$)
+
+Always check for subscripts, prefixes, or context clues to determine the intended base.
+
+### Summary Table
+
+Here's a quick reference for these important terms:
+
+| **Term**   | **Size**               | **Description**                                   | **Example**            |
+| ---------- | ---------------------- | ------------------------------------------------- | ---------------------- |
+| **Bit**    | 1 bit                  | Smallest unit; single binary digit (0 or 1)       | $1$                    |
+| **Nibble** | 4 bits                 | Half a byte; one hex digit                        | $1011_2 = B_{16}$      |
+| **Byte**   | 8 bits                 | Standard unit of memory; two hex digits           | $11010111_2 = D7_{16}$ |
+| **Word**   | Varies by architecture | Natural processing unit (32 or 64 bits typically) | 4 or 8 bytes           |
+| **MSB**    | Single bit             | Leftmost bit; highest value position              | The $1$ in $1011$      |
+| **LSB**    | Single bit             | Rightmost bit; lowest value position              | The $1$ in $1010$      |
+
+Understanding these terms is essential for working with computer hardware, low-level programming, network protocols, and data structures. They form the vocabulary that computer scientists and engineers use to discuss how computers represent and manipulate data at the most fundamental level.
