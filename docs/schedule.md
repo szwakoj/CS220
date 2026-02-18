@@ -5,6 +5,6 @@ This schedule will be primarily used as a history of topics that we have covered
 | ------------------- | -------------------------------------------- | ----------------------------------------- | ---- | --------------------------------------------------------------------------------- |
 | 1/19/26 (Week 1)    | - Syllabus                                   |                                           |      |                                                                                   |
 | 1/26/26 (Week 2)    | - Introduction<br>- History                  | [Introduction](lessons/1_introduction.md) |      |                                                                                   |
-| 2/2/26 (Week 3)     | - C Review<br>- Binary                       | [C Review](lessons/2_reviewing_c.md)      |      | - [Homework 1](homework/1_c_review.md) : C Review (Due 2/20/26) (Released 2/1/26) |
+| 2/2/26 (Week 3)     | - C Review<br>- Binary                       | [C Review](lessons/2_reviewing_c.md)      |      | - [Homework 1](homework/1_c_review.md) : C Review (Due 2/27/26) (Released 2/1/26) |
 | 2/9/26 (Week 4)     | - Started Binary<br>- Minor Hiccup           |                                           |      |                                                                                   |
 | 2/16/26<br>(Week 5) | - Finish Binary + Hex<br>- Binary Operations | [Binary](lessons/3_binary_hex.md)         |      |                                                                                   |
