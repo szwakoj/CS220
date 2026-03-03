@@ -201,7 +201,7 @@ The test will have True/False, Multiple Choice, Short Answer, Fill-in-the-Blank,
 
 ---
 
-**5. (2 pts) | ~1-2 sentences + expression** Design a bitwise check to see if a number is positive or negative.
+**5. (2 pts) | ~1-2 sentences + expression** Design a bitwise check to see if a number is even or odd.
 
 ---
 
