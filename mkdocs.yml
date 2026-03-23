@@ -38,6 +38,7 @@ markdown_extensions:
   - attr_list
   - md_in_html
   - pymdownx.blocks.caption
+  - admonition
 
 extra_javascript:
   - javascript/wcag_fixes.js
@@ -56,6 +57,10 @@ nav:
     - Introduction: lessons/1_introduction.md
     - Reviewing C: lessons/2_reviewing_c.md
     - Binary and Hex: lessons/3_binary_hex.md
+    - Boolean/Bitwise Ops: lessons/4_bool_logic.md
+    - Signed Representation: lessons/5_signed_unsigned.md
+    - Abstraction: lessons/6_transistors_2_pc.md
+    - Gates and Circuits: lessons/7_gates_circuits.md
   - Labs:
     - C Compilation: labs/c_compilation.md
   - Homework:
@@ -63,3 +68,4 @@ nav:
     - Install Software: homework/gcc_install.md
     - Homework 1 (Due 2/27/26): homework/1_c_review.md
     - Homework 2 (Due 3/13/26): homework/2_test_1_review.md
+    - Homework 3 (Due 4/5/26): homework/3_alu_and_gates.md
