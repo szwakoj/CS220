@@ -1,6 +1,6 @@
 # Gates and Circuits: Build a 4-bit ALU from Scratch
 
-## Due Date: 4/5/26
+## Due Date: 4/8/26
 
 ## Description
 
@@ -29,7 +29,7 @@ This is not arbitrary. NAND is **functionally complete**: any logic circuit that
 
 ```
 CS220-HW1-LastName/
-├── gates.c       # Part 1: all seven logic gates
+├── gates.c       # Part 1: all seven logic gates single bit and bitwise
 ├── circuits.c    # Part 2: half adder, full adder, ripple carry adder
 ├── alu.c         # Part 3: MUX and the complete 4-bit ALU
 ├── main.c        # Part 4: test harness and your written reflections
@@ -73,6 +73,22 @@ int xnor(int a, int b);
 **Verification:** In `main.c`, print the complete truth table for all seven gates (all input combinations, labeled). Your output must match the truth tables from the lesson exactly. A wrong truth table means the gate is wrong, debug before moving on, because every later section depends on this one.
 
 **Hint for getting started:** Think about what NAND already gives you. If you apply NAND to a signal and itself, `nand(a, a)`,what does that truth table look like? Start there and work outward.
+
+After verifying the basic single bit versions of the gates , create 4-bit bit wise versions of each following the pattern below:
+
+```C
+uint8_t bitwise_not(uint8_t a) {
+    int b0 = not(and(a >> 0, 1));
+    int b1 = not(and(a >> 1, 1));
+    int b2 = not(and(a >> 2, 1));
+    int b3 = not(and(a >> 3, 1));
+    return (b3 << 3) + (b2 << 2) + (b1 << 1) + b0;
+}
+```
+
+The above example is for the bit wise NOT, use it as the example for the other bit wise gates. The only thing needed is to copy the above block for each gate and replace not with the current gate. They all follow this pattern and only at this stage you are allowed to use the `+` operator. 
+
+**These bit wise versions of the gates are the ones you will use for part of the the arithmetic circuits and for the ALU gate operations.**
 
 ---
 
@@ -171,7 +187,7 @@ uint8_t alu(uint8_t a, uint8_t b, int op1, int op0);
 **Requirements:**
 
 - Compute **all four operation results** unconditionally, then use MUX circuits to select the correct one based on `op1` and `op0`. The selection logic must use your `mux()` function; no `if`, `switch`, or ternary operators in the selection step.
-- For the bitwise operations (AND, OR, XOR), operate bit-by-bit using the gate functions from Part 1, then reassemble the result the same way as in the adder.
+	- For the bit wise operations (AND, OR, XOR), use the **bit wise versions** of the gates from part 1
 - The opcode selection must itself be implemented in terms of your gate and MUX functions. Think about how two selector bits can be combined to choose among four options.
 
 **Verification:** Your `main.c` must test all four operations against all 256 input combinations (0–15 × 0–15 for 4-bit values) and report pass/fail per operation against a known-correct reference computed using C operators directly. This is meant to be your own final grade/sanity check as the grader will be doing the exact same thing with a premade test program. If you can accurately make a test program and show all passes, you know you will get a good grade. 
