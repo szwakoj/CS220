@@ -42,7 +42,7 @@ All files must compile together with no warnings under:
 gcc -Wall -Wextra -std=c11 gates.c circuits.c alu.c main.c -o alu
 ```
 
-Download the starting point [here](HW3_start.zip).
+Download the starting point [here](HW3_Start.zip).
 
 ---
 
