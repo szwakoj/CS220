@@ -21,7 +21,7 @@
     
     
       
-        <title>Homework 3 (Due 4/8/26) - CS 220 - Computer Organization</title>
+        <title>Homework 3 (Due 4/12/26) - CS 220 - Computer Organization</title>
       
     
     
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Homework 3 (Due 4/8/26)
+              Homework 3 (Due 4/12/26)
             
           </span>
         </div>
@@ -1018,7 +1018,7 @@
   <span class="md-ellipsis">
     
   
-    Homework 3 (Due 4/8/26)
+    Homework 3 (Due 4/12/26)
   
 
     
@@ -1036,7 +1036,7 @@
   <span class="md-ellipsis">
     
   
-    Homework 3 (Due 4/8/26)
+    Homework 3 (Due 4/12/26)
   
 
     
@@ -1062,10 +1062,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#due-date-4826" class="md-nav__link">
+  <a href="#due-date-41226" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Due Date: 4/8/26
+        Due Date: 4/12/26
       
     </span>
   </a>
@@ -1326,10 +1326,10 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#due-date-4826" class="md-nav__link">
+  <a href="#due-date-41226" class="md-nav__link">
     <span class="md-ellipsis">
       
-        Due Date: 4/8/26
+        Due Date: 4/12/26
       
     </span>
   </a>
@@ -1613,7 +1613,7 @@
 
 
 <h1 id="gates-and-circuits-build-a-4-bit-alu-from-scratch">Gates and Circuits: Build a 4-bit ALU from Scratch</h1>
-<h2 id="due-date-4826">Due Date: 4/8/26</h2>
+<h2 id="due-date-41226">Due Date: 4/12/26</h2>
 <h2 id="description">Description</h2>
 <p>In this homework, you will build a functioning 4-bit Arithmetic Logic Unit (ALU) in C in order to understand the core functionality of a large chuck of a modern CPU board. The twist: you are not allowed to use C's arithmetic or logical operators anywhere except inside a single primitive function. Every NOT, AND, OR, adder, and selector circuit must be constructed by composing that one primitive upward, exactly as real hardware is built from transistors.</p>
 <p>This mirrors the actual abstraction hierarchy of a computer. A transistor is a switch. Wire enough switches together and you get a gate. Wire enough gates together and you get an adder. Wire enough adders together and you get an ALU. By the end of this assignment you will have done exactly that in code.</p>
@@ -1768,6 +1768,9 @@
 </tbody>
 </table>
 <p>Verify by printing the full truth table before moving on.</p>
+<p>In order to complete the ALU section, you will need to create an extension of the 2-1 MUX for it to allow 4 bit inputs with a 2 bit selection signal to choose the single output. The way you do this is to nest a total of 3 MUX together in the following scheme:</p>
+<p><img alt="" src="../../img/fourbitmux.png" /></p>
+<p>You may make it into a function or repeat it each time you need a 4 bit MUX.</p>
 <h3 id="task-3b-4-bit-alu-20-points">Task 3b: 4-bit ALU (20 points)</h3>
 <p>Combine your ripple carry adder, bitwise gate circuits, and MUX into a complete 4-bit ALU. The ALU supports four operations selected by a 2-bit opcode (<code>op1</code>, <code>op0</code>):</p>
 <table>
