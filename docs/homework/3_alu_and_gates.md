@@ -1,6 +1,6 @@
 # Gates and Circuits: Build a 4-bit ALU from Scratch
 
-## Due Date: 4/8/26
+## Due Date: 4/12/26
 
 ## Description
 
@@ -169,6 +169,11 @@ Build this using only your gate functions. No C operators, no `if` statements, o
 
 Verify by printing the full truth table before moving on.
 
+In order to complete the ALU section, you will need to create an extension of the 2-1 MUX for it to allow 4 bit inputs with a 2 bit selection signal to choose the single output. The way you do this is to nest a total of 3 MUX together in the following scheme:
+
+![](../img/fourbitmux.png)
+
+You may make it into a function or repeat it each time you need a 4 bit MUX.
 ### Task 3b: 4-bit ALU (20 points)
 
 Combine your ripple carry adder, bitwise gate circuits, and MUX into a complete 4-bit ALU. The ALU supports four operations selected by a 2-bit opcode (`op1`, `op0`):
