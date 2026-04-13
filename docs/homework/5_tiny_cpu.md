@@ -261,7 +261,7 @@ make tinyCPU
 make test
 ```
 
-Download the starting point [here]().
+Download the starting point [here](tinyCPU.zip).
 
 ---
 
